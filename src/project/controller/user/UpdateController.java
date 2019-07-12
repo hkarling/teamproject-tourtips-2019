@@ -32,7 +32,6 @@ public class UpdateController implements Controller {
 			UserService.update(user);
 			request.getSession().setAttribute("sessionUser", user);
 			url = "/index.jsp";
-			mv.setRedirect(true);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			request.setAttribute("erorMsg", e.getMessage());
